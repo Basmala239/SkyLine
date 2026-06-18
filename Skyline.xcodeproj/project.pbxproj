@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC9183422FE4622C00794133 /* SkylineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9183412FE4622C00794133 /* SkylineApp.swift */; };
+		FC9183442FE4622C00794133 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9183432FE4622C00794133 /* ContentView.swift */; };
+		FC9183462FE4622F00794133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9183452FE4622F00794133 /* Assets.xcassets */; };
+		FC9183492FE4622F00794133 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9183482FE4622F00794133 /* Preview Assets.xcassets */; };
+		FC91834B2FE4622F00794133 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91834A2FE4622F00794133 /* Persistence.swift */; };
+		FC91834E2FE4622F00794133 /* Skyline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC91834C2FE4622F00794133 /* Skyline.xcdatamodeld */; };
+		FC9183582FE4622F00794133 /* SkylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9183572FE4622F00794133 /* SkylineTests.swift */; };
+		FC9183622FE4623000794133 /* SkylineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9183612FE4623000794133 /* SkylineUITests.swift */; };
+		FC9183642FE4623000794133 /* SkylineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9183632FE4623000794133 /* SkylineUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC9183542FE4622F00794133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC9183362FE4622C00794133 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC91833D2FE4622C00794133;
+			remoteInfo = Skyline;
+		};
+		FC91835E2FE4623000794133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC9183362FE4622C00794133 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC91833D2FE4622C00794133;
+			remoteInfo = Skyline;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC91833E2FE4622C00794133 /* Skyline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skyline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9183412FE4622C00794133 /* SkylineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylineApp.swift; sourceTree = "<group>"; };
+		FC9183432FE4622C00794133 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC9183452FE4622F00794133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC9183482FE4622F00794133 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC91834A2FE4622F00794133 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FC91834D2FE4622F00794133 /* Skyline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skyline.xcdatamodel; sourceTree = "<group>"; };
+		FC9183532FE4622F00794133 /* SkylineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkylineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9183572FE4622F00794133 /* SkylineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylineTests.swift; sourceTree = "<group>"; };
+		FC91835D2FE4623000794133 /* SkylineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkylineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9183612FE4623000794133 /* SkylineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylineUITests.swift; sourceTree = "<group>"; };
+		FC9183632FE4623000794133 /* SkylineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC91833B2FE4622C00794133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC9183502FE4622F00794133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC91835A2FE4623000794133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC9183352FE4622C00794133 = {
+			isa = PBXGroup;
+			children = (
+				FC9183402FE4622C00794133 /* Skyline */,
+				FC9183562FE4622F00794133 /* SkylineTests */,
+				FC9183602FE4623000794133 /* SkylineUITests */,
+				FC91833F2FE4622C00794133 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC91833F2FE4622C00794133 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC91833E2FE4622C00794133 /* Skyline.app */,
+				FC9183532FE4622F00794133 /* SkylineTests.xctest */,
+				FC91835D2FE4623000794133 /* SkylineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC9183402FE4622C00794133 /* Skyline */ = {
+			isa = PBXGroup;
+			children = (
+				FC9183412FE4622C00794133 /* SkylineApp.swift */,
+				FC9183432FE4622C00794133 /* ContentView.swift */,
+				FC9183452FE4622F00794133 /* Assets.xcassets */,
+				FC91834A2FE4622F00794133 /* Persistence.swift */,
+				FC91834C2FE4622F00794133 /* Skyline.xcdatamodeld */,
+				FC9183472FE4622F00794133 /* Preview Content */,
+			);
+			path = Skyline;
+			sourceTree = "<group>";
+		};
+		FC9183472FE4622F00794133 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FC9183482FE4622F00794133 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC9183562FE4622F00794133 /* SkylineTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC9183572FE4622F00794133 /* SkylineTests.swift */,
+			);
+			path = SkylineTests;
+			sourceTree = "<group>";
+		};
+		FC9183602FE4623000794133 /* SkylineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC9183612FE4623000794133 /* SkylineUITests.swift */,
+				FC9183632FE4623000794133 /* SkylineUITestsLaunchTests.swift */,
+			);
+			path = SkylineUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC91833D2FE4622C00794133 /* Skyline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC9183672FE4623000794133 /* Build configuration list for PBXNativeTarget "Skyline" */;
+			buildPhases = (
+				FC91833A2FE4622C00794133 /* Sources */,
+				FC91833B2FE4622C00794133 /* Frameworks */,
+				FC91833C2FE4622C00794133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skyline;
+			productName = Skyline;
+			productReference = FC91833E2FE4622C00794133 /* Skyline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC9183522FE4622F00794133 /* SkylineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC91836A2FE4623000794133 /* Build configuration list for PBXNativeTarget "SkylineTests" */;
+			buildPhases = (
+				FC91834F2FE4622F00794133 /* Sources */,
+				FC9183502FE4622F00794133 /* Frameworks */,
+				FC9183512FE4622F00794133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC9183552FE4622F00794133 /* PBXTargetDependency */,
+			);
+			name = SkylineTests;
+			productName = SkylineTests;
+			productReference = FC9183532FE4622F00794133 /* SkylineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC91835C2FE4623000794133 /* SkylineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC91836D2FE4623000794133 /* Build configuration list for PBXNativeTarget "SkylineUITests" */;
+			buildPhases = (
+				FC9183592FE4623000794133 /* Sources */,
+				FC91835A2FE4623000794133 /* Frameworks */,
+				FC91835B2FE4623000794133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC91835F2FE4623000794133 /* PBXTargetDependency */,
+			);
+			name = SkylineUITests;
+			productName = SkylineUITests;
+			productReference = FC91835D2FE4623000794133 /* SkylineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC9183362FE4622C00794133 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FC91833D2FE4622C00794133 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FC9183522FE4622F00794133 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FC91833D2FE4622C00794133;
+					};
+					FC91835C2FE4623000794133 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FC91833D2FE4622C00794133;
+					};
+				};
+			};
+			buildConfigurationList = FC9183392FE4622C00794133 /* Build configuration list for PBXProject "Skyline" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC9183352FE4622C00794133;
+			productRefGroup = FC91833F2FE4622C00794133 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC91833D2FE4622C00794133 /* Skyline */,
+				FC9183522FE4622F00794133 /* SkylineTests */,
+				FC91835C2FE4623000794133 /* SkylineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC91833C2FE4622C00794133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9183492FE4622F00794133 /* Preview Assets.xcassets in Resources */,
+				FC9183462FE4622F00794133 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC9183512FE4622F00794133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC91835B2FE4623000794133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC91833A2FE4622C00794133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC91834B2FE4622F00794133 /* Persistence.swift in Sources */,
+				FC9183442FE4622C00794133 /* ContentView.swift in Sources */,
+				FC9183422FE4622C00794133 /* SkylineApp.swift in Sources */,
+				FC91834E2FE4622F00794133 /* Skyline.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC91834F2FE4622F00794133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9183582FE4622F00794133 /* SkylineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC9183592FE4623000794133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9183642FE4623000794133 /* SkylineUITestsLaunchTests.swift in Sources */,
+				FC9183622FE4623000794133 /* SkylineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC9183552FE4622F00794133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC91833D2FE4622C00794133 /* Skyline */;
+			targetProxy = FC9183542FE4622F00794133 /* PBXContainerItemProxy */;
+		};
+		FC91835F2FE4623000794133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC91833D2FE4622C00794133 /* Skyline */;
+			targetProxy = FC91835E2FE4623000794133 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FC9183652FE4623000794133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC9183662FE4623000794133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC9183682FE4623000794133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Skyline/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.Skyline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC9183692FE4623000794133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Skyline/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.Skyline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC91836B2FE4623000794133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.SkylineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skyline.app/Skyline";
+			};
+			name = Debug;
+		};
+		FC91836C2FE4623000794133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.SkylineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skyline.app/Skyline";
+			};
+			name = Release;
+		};
+		FC91836E2FE4623000794133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.SkylineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skyline;
+			};
+			name = Debug;
+		};
+		FC91836F2FE4623000794133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.SkylineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skyline;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC9183392FE4622C00794133 /* Build configuration list for PBXProject "Skyline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC9183652FE4623000794133 /* Debug */,
+				FC9183662FE4623000794133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC9183672FE4623000794133 /* Build configuration list for PBXNativeTarget "Skyline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC9183682FE4623000794133 /* Debug */,
+				FC9183692FE4623000794133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC91836A2FE4623000794133 /* Build configuration list for PBXNativeTarget "SkylineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC91836B2FE4623000794133 /* Debug */,
+				FC91836C2FE4623000794133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC91836D2FE4623000794133 /* Build configuration list for PBXNativeTarget "SkylineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC91836E2FE4623000794133 /* Debug */,
+				FC91836F2FE4623000794133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC91834C2FE4622F00794133 /* Skyline.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC91834D2FE4622F00794133 /* Skyline.xcdatamodel */,
+			);
+			currentVersion = FC91834D2FE4622F00794133 /* Skyline.xcdatamodel */;
+			path = Skyline.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC9183362FE4622C00794133 /* Project object */;
+}
