@@ -55,7 +55,7 @@ struct SkylineApp: App {
     
     private func configureTabBar() {
         let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
+        appearance.configureWithDefaultBackground()
         
         // Set background color
         appearance.backgroundColor = UIColor(theme.tabBarBackgroundColor)
@@ -79,7 +79,11 @@ struct SkylineApp: App {
         
         // Apply appearance
         UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
+        
+        // For iOS 13+
+        if #available(iOS 13.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
         
         // Set tint colors
         UITabBar.appearance().tintColor = UIColor(theme.accentColor)
@@ -89,7 +93,7 @@ struct SkylineApp: App {
     
     private func configureNavigationBar() {
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
+        appearance.configureWithDefaultBackground()
         
         // Set background color
         appearance.backgroundColor = UIColor(theme.navigationBarBackgroundColor)
@@ -132,7 +136,11 @@ struct SkylineApp: App {
         // Apply appearance
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
+        
+        // For iOS 13+
+        if #available(iOS 13.0, *) {
+            UINavigationBar.appearance().compactAppearance = appearance
+        }
         
         // Set tint color for bar buttons
         UINavigationBar.appearance().tintColor = UIColor(theme.accentColor)
@@ -155,4 +163,3 @@ struct SkylineApp: App {
         scrollViewAppearance.backgroundColor = UIColor(theme.backgroundColor)
     }
 }
-

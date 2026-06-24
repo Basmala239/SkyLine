@@ -10,29 +10,42 @@ import SwiftUI
 struct DetailsView: View {
     @ObservedObject var viewModel = DetailsViewModel()
     var cityName: String = "Alexandria"
+    var isLoading: Bool = false
     var showAddToFavoriteBtn: Bool = false
     @State private var theme = AppTheme.current
+    @State private var lastFetchedCity: String = ""
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                if viewModel.isLoading {
+                // Show loading state for location
+                if isLoading && cityName == "Loading..." {
+                    VStack(spacing: 16) {
+                        ProgressView()
+                            .tint(theme.fontColor)
+                            .scaleEffect(1.5)
+                        
+                        Text("Getting your location...")
+                            .font(.headline)
+                            .foregroundColor(theme.secondaryFontColor)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(.top, 100)
+                }
+                // Show weather content
+                else if viewModel.isLoading {
                     ProgressView()
                         .tint(theme.fontColor)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding(.top, 100)
-                    
                 } else if let error = viewModel.errorMessage {
                     ErrorView(message: error) {
                         viewModel.refreshWeather()
                     }
                     .padding(.top, 50)
                 } else if viewModel.weatherResponse != nil {
-                    
-                    
                     WeatherCard(viewModel: viewModel, theme: theme)
                         .padding()
-                    
                     
                     VStack(alignment: .leading, spacing: 12) {
                         Text("DETAILS")
@@ -90,7 +103,6 @@ struct DetailsView: View {
                         )
                     }
                     .padding(.horizontal)
-                    
                 } else {
                     EmptyStateView(
                         iconName: "location",
@@ -109,7 +121,36 @@ struct DetailsView: View {
         .foregroundColor(theme.fontColor)
         .onAppear {
             theme = AppTheme.current
+            // Fetch weather when view appears
+            fetchWeatherIfNeeded()
+        }
+        .onChange(of: cityName) { newCityName in
+            print("🔄 DetailsView: cityName changed to: \(newCityName)")
+            // Fetch weather when city name changes
+            fetchWeatherIfNeeded()
+        }
+        .onChange(of: viewModel.locationName) { newLocationName in
+            print("📍 DetailsView: viewModel locationName changed to: \(newLocationName)")
+        }
+    }
+    
+    private func fetchWeatherIfNeeded() {
+        print("🔍 fetchWeatherIfNeeded called - cityName: \(cityName), isLoading: \(isLoading)")
+        
+        // Skip if city name is invalid
+        let invalidNames = ["Loading...", "Location Denied", "Location Error", "Unknown Location", "Location Unavailable", ""]
+        if invalidNames.contains(cityName) {
+            print("❌ Invalid city name: \(cityName), skipping fetch")
+            return
+        }
+        
+        // Only fetch if city name changed or first time
+        if lastFetchedCity != cityName {
+            print("🌤️ Fetching weather for: \(cityName)")
+            lastFetchedCity = cityName
             viewModel.fetchWeather(for: cityName)
+        } else {
+            print("ℹ️ City name unchanged (\(cityName)), not re-fetching")
         }
     }
     

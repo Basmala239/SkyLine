@@ -42,6 +42,7 @@
 		FCA105922FEB43030071E602 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA105912FEB43030071E602 /* NetworkMonitor.swift */; };
 		FCA105952FEB56ED0071E602 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA105942FEB56ED0071E602 /* SplashView.swift */; };
 		FCA105992FEB58DA0071E602 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA105982FEB58DA0071E602 /* AppTheme.swift */; };
+		FCFE36B22FEBFED60099DCAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE36B12FEBFED60099DCAC /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		FCA105942FEB56ED0071E602 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FCA105962FEB57ED0071E602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FCA105982FEB58DA0071E602 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		FCFE36B12FEBFED60099DCAC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,7 @@
 		FC01C37E2FE9C1B30050FC0C /* Utilty */ = {
 			isa = PBXGroup;
 			children = (
-				FCA1059A2FEB61030071E602 /* Extension */,
+				FCFE36B02FEBFEC20099DCAC /* Manager */,
 				FCA105972FEB58CE0071E602 /* theme */,
 				FC01C37F2FE9C1BD0050FC0C /* SharedView */,
 			);
@@ -478,11 +480,12 @@
 			path = theme;
 			sourceTree = "<group>";
 		};
-		FCA1059A2FEB61030071E602 /* Extension */ = {
+		FCFE36B02FEBFEC20099DCAC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				FCFE36B12FEBFED60099DCAC /* LocationManager.swift */,
 			);
-			path = Extension;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -622,6 +625,7 @@
 				FC01C35E2FE98C350050FC0C /* APIEndPoint.swift in Sources */,
 				FC9972B02FEAE9E100B3EC31 /* FavoriteViewModel.swift in Sources */,
 				FC01C37B2FE9BA0E0050FC0C /* HomeViewModel.swift in Sources */,
+				FCFE36B22FEBFED60099DCAC /* LocationManager.swift in Sources */,
 				FC01C3652FE991BC0050FC0C /* Forecast.swift in Sources */,
 				FC9183422FE4622C00794133 /* SkylineApp.swift in Sources */,
 				FCA105992FEB58DA0071E602 /* AppTheme.swift in Sources */,
