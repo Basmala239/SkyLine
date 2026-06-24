@@ -14,6 +14,7 @@ class DetailsViewModel: ObservableObject {
     @Published var weatherForecast: WeatherForecastResponse?
     @Published var isLoading = false
     @Published var errorMessage: String?
+    @Published var isCityFavorited = false
 
     // MARK: - Computed Properties for UI
     var locationName: String {
@@ -70,19 +71,44 @@ class DetailsViewModel: ObservableObject {
         guard let location = weatherResponse?.location else { return "Unknown" }
         return "\(location.name), \(location.country)"
     }
+    
+    var maxTemp: String {
+         if let forecastDays = weatherForecast?.forecast.forecastday, !forecastDays.isEmpty {
+            let today = forecastDays[0]
+            return "\(Int(today.day.maxtempC))°C"
+        }
+        return "--"
+    }
+    
+    var minTemp: String {
+        if let forecastDays = weatherForecast?.forecast.forecastday, !forecastDays.isEmpty {
+            let today = forecastDays[0]
+            return "\(Int(today.day.mintempC))°C"
+        }
+        return "--"
+    }
 
     // MARK: - Private Properties
     private let fetchCurrentWeatherUseCase: FetchCurrentWeatherUseCaseProtocol
     private let fetchWeatherForecastUseCase: FetchWeatherForecastUseCaseProtocol
+    private let saveFavoriteUseCase: SaveFavoriteUseCaseProtocol
+    private let checkFavoriteUseCase: CheckFavoriteUseCaseProtocol
+    private let deleteFavoriteUseCase: DeleteFavoriteUseCaseProtocol
     private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Initialization
     init(
         fetchWeatherUseCase: FetchCurrentWeatherUseCaseProtocol = FetchCurrentWeatherUseCase(),
-        fetchWeatherForecastUseCase: FetchWeatherForecastUseCaseProtocol = FetchWeatherForecastUseCase()
+        fetchWeatherForecastUseCase: FetchWeatherForecastUseCaseProtocol = FetchWeatherForecastUseCase(),
+        saveFavoriteUseCase: SaveFavoriteUseCaseProtocol = SaveFavoriteUseCase(),
+        checkFavoriteUseCase: CheckFavoriteUseCaseProtocol = CheckFavoriteUseCase(),
+        deleteFavoriteUseCase: DeleteFavoriteUseCaseProtocol = DeleteFavoriteUseCase()
     ) {
+        self.deleteFavoriteUseCase = deleteFavoriteUseCase
         self.fetchCurrentWeatherUseCase = fetchWeatherUseCase
         self.fetchWeatherForecastUseCase = fetchWeatherForecastUseCase
+        self.saveFavoriteUseCase = saveFavoriteUseCase
+        self.checkFavoriteUseCase = checkFavoriteUseCase
     }
 
     // MARK: - Public Methods
@@ -111,9 +137,12 @@ class DetailsViewModel: ObservableObject {
                     }
                 },
                 receiveValue: { [weak self] currentWeather, forecast in
-                    self?.weatherResponse = currentWeather
-                    self?.weatherForecast = forecast
-                    self?.errorMessage = nil
+                    guard let self = self else { return }
+                    self.weatherResponse = currentWeather
+                    self.weatherForecast = forecast
+                    self.errorMessage = nil
+                    
+                    self.updateFavoriteStatus()
                 }
             )
             .store(in: &cancellables)
@@ -122,5 +151,24 @@ class DetailsViewModel: ObservableObject {
     func refreshWeather() {
         guard let city = weatherResponse?.location.name else { return }
         fetchWeather(for: city)
+    }
+    
+    func updateFavoriteStatus() {
+        self.isCityFavorited = checkFavoriteUseCase.execute(name: locationName)
+    }
+    
+    func toggleFavorite() {
+        if isCityFavorited {
+            deleteFavoriteUseCase.execute(name: locationName)
+            isCityFavorited = false
+        } else {
+            saveFavoriteUseCase.execute(
+                name: locationName,
+                temp: temperature,
+                icon: conditionIconURL,
+                lastUpdated: lastUpdated
+            )
+            isCityFavorited = true
+        }
     }
 }

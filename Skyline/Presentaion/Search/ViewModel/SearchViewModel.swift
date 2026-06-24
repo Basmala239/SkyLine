@@ -9,13 +9,20 @@ import Foundation
 import Combine
 
 class SearchViewModel: ObservableObject{
-    @Published var searchResult: [SearchResult]?
+    @Published var searchResult: [SearchResult] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var searchText = ""
     
     private let getSearchLocationUseCase: SearchLocationUseCaseProtocol
     private var cancellables = Set<AnyCancellable>()
+    
+    var hasNoResults: Bool {
+        !searchText.isEmpty &&
+        !isLoading &&
+        errorMessage == nil &&
+        searchResult.isEmpty
+    }
     
     init(getSearchLocationUseCase: SearchLocationUseCaseProtocol = SearchLocationUseCase()) {
         self.getSearchLocationUseCase = getSearchLocationUseCase
@@ -39,7 +46,7 @@ class SearchViewModel: ObservableObject{
                     switch completion {
                     case .failure(let error):
                         self?.errorMessage = error.localizedDescription
-                        self?.searchResult = nil
+                        self?.searchResult = []
                     case .finished:
                         break
                     }
@@ -58,8 +65,15 @@ class SearchViewModel: ObservableObject{
             .removeDuplicates()
             .sink { [weak self] text in
                 guard let self = self else { return }
-                if !text.isEmpty {
-                    self.fetchLocation(for: text)
+
+                let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+
+                if trimmedText.isEmpty {
+                    self.searchResult = []
+                    self.errorMessage = nil
+                    self.isLoading = false
+                } else {
+                    self.fetchLocation(for: trimmedText)
                 }
             }
             .store(in: &cancellables)

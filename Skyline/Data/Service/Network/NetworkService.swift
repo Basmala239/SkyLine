@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Network
 
 protocol NetworkServiceProtocol {
     func isInternetConnected() -> Bool
@@ -18,8 +19,26 @@ class NetworkService: NetworkServiceProtocol {
     
     private let baseURL = "https://api.weatherapi.com/v1"
     private let apiKey = "fd25ebb8814a4d49acc122359241903"
+    private let monitor = NWPathMonitor()
+    private let queue = DispatchQueue(label: "NetworkMonitor")
     
-    private init() {}
+    private var isConnected = false
+
+        private init() {
+            startMonitoring()
+        }
+
+        private func startMonitoring() {
+            monitor.pathUpdateHandler = { [weak self] path in
+                self?.isConnected = path.status == .satisfied
+            }
+
+            monitor.start(queue: queue)
+        }
+
+        func isInternetConnected() -> Bool {
+            return isConnected
+        }
 
     func getData<T: Decodable>(
         endpoint: String,
@@ -67,7 +86,4 @@ class NetworkService: NetworkServiceProtocol {
             .eraseToAnyPublisher()
     }
     
-    func isInternetConnected() -> Bool {
-         return true
-    }
 }
