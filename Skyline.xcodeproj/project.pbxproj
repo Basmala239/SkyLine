@@ -43,6 +43,7 @@
 		FCA105952FEB56ED0071E602 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA105942FEB56ED0071E602 /* SplashView.swift */; };
 		FCA105992FEB58DA0071E602 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA105982FEB58DA0071E602 /* AppTheme.swift */; };
 		FCFE36B22FEBFED60099DCAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE36B12FEBFED60099DCAC /* LocationManager.swift */; };
+		FCFE36B42FEC08B10099DCAC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE36B32FEC08B10099DCAC /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		FCA105962FEB57ED0071E602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FCA105982FEB58DA0071E602 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		FCFE36B12FEBFED60099DCAC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FCFE36B32FEC08B10099DCAC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFE36B12FEBFED60099DCAC /* LocationManager.swift */,
+				FCFE36B32FEC08B10099DCAC /* DIContainer.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				FC9972A92FEAE88E00B3EC31 /* FavoriteCoreDataManager.swift in Sources */,
 				FC01C3792FE9B9510050FC0C /* SearchLocationUseCase.swift in Sources */,
 				FC01C3732FE9B88B0050FC0C /* APIError.swift in Sources */,
+				FCFE36B42FEC08B10099DCAC /* DIContainer.swift in Sources */,
 				FCA105952FEB56ED0071E602 /* SplashView.swift in Sources */,
 				FC9972AD2FEAE96F00B3EC31 /* FavoriteLocationUseCases.swift in Sources */,
 				FCA105902FEB3C1C0071E602 /* DayDetailsView.swift in Sources */,
